@@ -1,9 +1,2 @@
-Développer une application à l'aide d'une API qui recense les personnes atteintes du covid.
-Je veux une belle présentation visuelle qui met bien en avant les statistiques récupérés.
-BONUS : 
-Une page pour plusieurs types de statistiques !
+Permet de mettre à disposition différentes informations concernant la pandémie de la COVID-19, pour la France et ses départements.
 
-Architecture MVC
-
-NODES PACKAGES :
-- CARTE BLANCHE
