@@ -1,0 +1,25 @@
+/* CUSTOM FOOTER */
+
+.custom-shape-divider-bottom-1616438379 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1616438379 svg {
+    position: relative;
+    display: block;
+    width: calc(105% + 1.3px);
+    height: 58px;
+}
+
+.custom-shape-divider-bottom-1616438379 .shape-fill {
+    fill: #930606;
+}
+
+/* CUSTOM SELECT */
+

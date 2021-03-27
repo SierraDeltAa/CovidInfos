@@ -1,0 +1,4 @@
+La palette de couleur doit être : Rouge | Blanc | Noir
+Le logo doit être utilisé sur chaque page
+Carte blanche pour la mise en forme et la librairie CSS
+  

@@ -1,0 +1,94 @@
+<%- include("./partials/header.ejs") %> 
+
+<div class="container d-flex flex-column mt-4">
+    <div data-aos="fade-in" data-aos-duration="1500" class="text-center my-2 ">
+        <h4>Infos du <strong><%=today %></strong></h4>
+        <small><i>(Actualisation tout les jours à 20h00)</i></small>
+    </div>
+    <div class="d-flex flex-row flex-wrap mb-5 justify-content-around">
+
+        <div data-aos="fade-in" data-aos-duration="1500" class="card text-center col-lg-3 col-md-5 col-sm-8 my-3">
+            <div class="card-header">Hospitalisés</div>
+            <div class="card-body">
+                <h5 class="card-title">Hospitalisations cumulés en ce jour</h5>
+                <p class="card-text">
+                    <%= hospitalises %>
+                </p>
+            </div>
+            <div class="card-footer">
+                <small>Nombre total de personnes hospitalisées en ce moment</small>
+            </div>
+        </div>
+        
+        <div data-aos="fade-in" data-aos-duration="1500" class="card text-center col-lg-3 col-md-5 col-sm-8 my-3">
+            <div class="card-header">Décès</div>
+            <div class="card-body">
+                <h5 class="card-title">Bilan total des décès</h5>
+                <p class="card-text">
+                    <%= deces %>
+                </p>
+            </div>
+            <div class="card-footer">
+                <small>Nombre total de personnes décédées depuis le début de la pandémie</small>
+            </div>
+        </div>
+        
+        <div data-aos="fade-in" data-aos-duration="1500" class="card text-center col-lg-3 col-md-5 col-sm-8 my-3">
+            <div class="card-header">Nouvelles hospitalisations</div>
+            <div class="card-body">
+                <h5 class="card-title">Nouvelles entrées en hospitalisation</h5>
+                <p class="card-text">
+                    <%= newHospitalisations %>
+                </p>
+            </div>
+            <div class="card-footer">
+                <small>Nombre total de personnes admises en hospitalisation aujourd'hui</small>
+            </div>
+        </div>
+    </div>
+
+    <div data-aos="fade-in" data-aos-duration="1500" class="d-flex flex-row flex-wrap mb-5 justify-content-around">
+
+        <div class="card text-center col-lg-3 col-md-5 col-sm-8 my-3">
+            <div class="card-header">Réanimations</div>
+            <div class="card-body">
+                <h5 class="card-title">Réanimations cumulés</h5>
+                <p class="card-text">
+                    <%= reanimations %>
+                </p>
+            </div>
+            <div class="card-footer">
+                <small>Nombre total de personnes admises en service de réanimation</small>
+            </div>
+        </div>
+        
+        <div data-aos="fade-in" data-aos-duration="1500" class="card text-center col-lg-3 col-md-5 col-sm-8 my-3">
+            <div class="card-header">Guéris</div>
+            <div class="card-body">
+                <h5 class="card-title">Bilan total de personnes guéries</h5>
+                <p class="card-text">
+                    <%= gueris %>
+                </p>
+            </div>
+            <div class="card-footer">
+                <small>Nombre total de personnes guéries de la COVID-19</small>
+            </div>
+        </div>
+        
+        <div data-aos="fade-in" data-aos-duration="1500" class="card text-center col-lg-3 col-md-5 col-sm-8 my-3">
+            <div class="card-header">Nouvelles réanimations</div>
+            <div class="card-body">
+                <h5 class="card-title">Nouvelles entrées en réanimation</h5>
+                <p class="card-text">
+                    <%= newReanimations %>
+                </p>
+            </div>
+            <div class="card-footer">
+                <small>Nombre total de personnes admises en service de réanimation aujourd'hui</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include("./partials/footer.ejs") %> 

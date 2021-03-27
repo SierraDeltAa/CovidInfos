@@ -1,0 +1,1 @@
+import flatpickr from 'flatpickr';
