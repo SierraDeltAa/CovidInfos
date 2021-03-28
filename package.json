@@ -7,7 +7,7 @@
   },
   "main": "app.js",
   "scripts": {
-    "start": "start https://covid-stats-france.herokuapp.com/ ",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
