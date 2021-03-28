@@ -5,7 +5,10 @@ const router = express.Router();
 
 const homeRouter = require("./homeRoutes");
 const departmentRouter = require("./departmentRoutes");
-const fetch = require("./fetchDepartment");
+const fetchDepartment = require("./fetchDepartment");
+const dateRouter = require("./dateRoutes");
+const fetchDate = require("./fetchDate");
+
 
 
 // HOME
@@ -15,7 +18,12 @@ router.use("/",homeRouter);
 // DEPARTMENT
 
 router.use("/department",departmentRouter);
-router.use(fetch);
+router.use(fetchDepartment);
+
+// DATE
+
+router.use("/date",dateRouter);
+router.use(fetchDate);
 
 
 module.exports = router;

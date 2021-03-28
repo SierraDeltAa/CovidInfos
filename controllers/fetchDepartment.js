@@ -3,7 +3,7 @@ const router = express.Router();
 const https = require("https");
 
 
-router.route("/fetch/:customDepartment")
+router.route("/fetchDepartment/:customDepartment")
 .get((req,res)=>{
     let url = "https://coronavirusapi-france.now.sh/LiveDataByDepartement?Departement="+req.params.customDepartment;
     https.get(url,(response)=>{
