@@ -1,11 +1,14 @@
+const { json } = require("express");
 const express = require("express");
 const router = express.Router();
 const https = require("https");
+const jsonParser = require("json-parse-better-errors");
+const { parse } = require("path");
 
 
 router.route("/")
 .get((req,res)=>{
-    https.get("https://coronavirusapi-france.now.sh/FranceLiveGlobalData",(response)=>{
+    https.get("https://coronavirusapi-france.vercel.app/FranceLiveGlobalData",(response)=>{
         response.on("data",(data)=>{
             let result = JSON.parse(data);
             let resultat = result.FranceGlobalLiveData;

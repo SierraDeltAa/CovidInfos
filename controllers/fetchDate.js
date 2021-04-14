@@ -5,7 +5,7 @@ const https = require("https");
 
 router.route("/fetchDate/:customDate")
 .get((req,res)=>{
-    let url = "https://coronavirusapi-france.now.sh/AllDataByDate?date="+req.params.customDate;
+    let url = "https://coronavirusapi-france.vercel.app/AllDataByDate?date="+req.params.customDate;
     https.get(url,(response)=>{
         let data;
         response.on("data",(chunk)=>{
