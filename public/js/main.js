@@ -16,6 +16,8 @@ $('#selectDepartment').on('change', function(e){
             $("#depR").text(dataDepartment.reanimation);
             $("#depNewH").text(dataDepartment.nouvellesHospitalisations);
             $("#depNewR").text(dataDepartment.nouvellesReanimations);
+            $("#depNewI").text(dataDepartment.nouvellesPremieresInjections);
+            $("#depI").text(dataDepartment.cumulPremieresInjections);
         }
     })
 });
@@ -31,32 +33,16 @@ $("#selectDate").on('change', function(e){
         url: "./fetchDate/"+valueSelected,
         success : (responseDate)=>{
             let dataDate = responseDate;
-            let hospitalisesTotal = 0;
-            let guerisTotal = 0;
-            let decesTotal = 0;
-            let reanimationsTotal = 0;
-            let nouvellesHospitalisationsTotal = 0;
-            let nouvellesReanimationsTotal = 0;
-            dataDate.forEach(department => {
-                hospitalisesTotal += department.hospitalises;
-                guerisTotal += department.gueris;
-                decesTotal += department.deces;
-                reanimationsTotal += department.reanimation;
-                nouvellesHospitalisationsTotal += department.nouvellesHospitalisations;
-                nouvellesReanimationsTotal += department.nouvellesReanimations;
-            });
-            hospitalisesTotal = Math.floor(hospitalisesTotal/= 3);
-            guerisTotal = Math.floor(guerisTotal/= 3);
-            decesTotal = Math.floor(decesTotal/= 3);
-            reanimationsTotal = Math.floor(reanimationsTotal/= 3);
-            nouvellesHospitalisationsTotal = Math.floor(nouvellesHospitalisationsTotal/= 3);
-            nouvellesReanimationsTotal = Math.floor(nouvellesReanimationsTotal/= 3);
-            $("#dateH").text(hospitalisesTotal);
-            $("#dateG").text(guerisTotal);
-            $("#dateD").text(decesTotal);
-            $("#dateR").text(reanimationsTotal);
-            $("#dateNewH").text(nouvellesHospitalisationsTotal);
-            $("#dateNewR").text(nouvellesReanimationsTotal);
+            console.log(dataDate);
+            $("#dateC").text(dataDate.casConfirmes);
+            $("#dateH").text(dataDate.hospitalises);
+            $("#dateG").text(dataDate.gueris);
+            $("#dateD").text(dataDate.deces);
+            $("#dateR").text(dataDate.reanimation);
+            $("#dateNewH").text(dataDate.nouvellesHospitalisations);
+            $("#dateNewR").text(dataDate.nouvellesReanimations);
+            $("#dateNewI").text(dataDate.nouvellesPremieresInjections);
+            $("#dateI").text(dataDate.cumulPremieresInjections);
 
         }
     })
